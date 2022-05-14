@@ -4,3 +4,13 @@
 @api=http://localhost:3000/api
 
 GET {{api}}/saude/ping
+
+###
+# Inserir um produto
+POST {{api}}/produtos
+Content-Type: application/json
+
+{
+    "codigo": "123",
+    "nome": "produto123"
+}
