@@ -4,6 +4,8 @@ const produtoServico = require('../servico/produto-servico')
 
 const { FaltaCampoExcecao } = require('../utils/excecao')
 
+const logger = require('../utils/logging').iniciar('produto-controlador')
+
 const inserirProdutoNoControlador = (req, res) => {
     const produto = req.body
     try {
@@ -14,6 +16,7 @@ const inserirProdutoNoControlador = (req, res) => {
                 mensagem: '' + excecao
             })
         }
+        logger.informarErro('Nao sei o que aconteceu', excecao)
         return res.status(httpStatus.INTERNAL_SERVER_ERROR).json({
             mensagem: 'Entre em contato com o suporte'
         })
