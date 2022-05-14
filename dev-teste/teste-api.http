@@ -14,3 +14,12 @@ Content-Type: application/json
     "codigo": "123",
     "nome": "produto123"
 }
+
+###
+# Inserir um produto
+POST {{api}}/produtos
+Content-Type: application/json
+
+{
+    "nome": "produto123"
+}
