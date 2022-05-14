@@ -1,0 +1,6 @@
+##
+# Testar o ping
+
+@api=http://localhost:3000/api
+
+GET {{api}}/saude/ping
