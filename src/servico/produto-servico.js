@@ -1,4 +1,14 @@
+const { FaltaCampoExcecao } = require('../utils/excecao')
+
 const validarProduto = (produto) => {
+
+    if (!produto.codigo) {
+        throw new FaltaCampoExcecao('codigo')
+    }
+
+    if (!produto.nome) {
+        throw new FaltaCampoExcecao('nome')
+    }
 
 }
 
@@ -7,3 +17,7 @@ const inserirProdutoNoServico = (produto) => {
     inserirProdutoNoBanco(produtoParaOBanco)
     return produtoParaOBanco
 } 
+
+module.exports = {
+    inserirProdutoNoServico
+}
