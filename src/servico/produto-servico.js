@@ -12,6 +12,10 @@ const validarProduto = (produto) => {
 
 }
 
+const inserirProdutoNoBanco = (produtoParaOBanco) => {
+    // Salva no banco
+}
+
 const inserirProdutoNoServico = (produto) => {
     const produtoParaOBanco = validarProduto(produto)
     inserirProdutoNoBanco(produtoParaOBanco)
